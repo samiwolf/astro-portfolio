@@ -1,0 +1,15 @@
+---
+interface Props {
+  skills: string[];
+}
+
+const { skills } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2">
+  {skills.map((skill) => (
+    <span class="px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 text-gray-700 text-sm rounded-full border border-blue-200 hover:border-blue-300 transition-colors">
+      {skill}
+    </span>
+  ))}
+</div>
