@@ -5,6 +5,7 @@ import CVSection from '../components/cv/CVSection.astro';
 import ExperienceItem from '../components/cv/ExperienceItem.astro';
 import SkillItem from '../components/cv/SkillItem.astro';
 import EducationItem from '../components/cv/EducationItem.astro';
+import DownloadCVButton from '../components/DownloadCVButton.jsx';
 ---
 
 <Layout title="MD. SAMIUL ISLAM SIDDIQUI - Software Engineer">
@@ -19,6 +20,9 @@ import EducationItem from '../components/cv/EducationItem.astro';
         linkedin="samiulsiddiqui"
         github="samiwolf"
       />
+      <div class="mt-4 flex justify-center">
+        <DownloadCVButton client:load />
+      </div>
       
       <div class="mt-8 space-y-8">
         <CVSection title="About Me">
