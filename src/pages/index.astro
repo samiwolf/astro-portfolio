@@ -1,50 +1,175 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/Layout.astro';
+import CVHeader from '../components/cv/CVHeader.astro';
+import CVSection from '../components/cv/CVSection.astro';
+import ExperienceItem from '../components/cv/ExperienceItem.astro';
+import SkillItem from '../components/cv/SkillItem.astro';
+import EducationItem from '../components/cv/EducationItem.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="MD. SAMIUL ISLAM SIDDIQUI - Software Engineer">
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+      <CVHeader 
+        name="MD. SAMIUL ISLAM SIDDIQUI"
+        title="Software Engineer"
+        location="Dhaka, Bangladesh"
+        phone="+880 1861864420"
+        email="siddiquisamiul@gmail.com"
+        linkedin="samiulsiddiqui"
+        github="samiwolf"
+      />
+      
+      <div class="mt-8 space-y-8">
+        <CVSection title="About Me">
+          <div class="space-y-4">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Passionate <span class="font-semibold text-blue-600">Full Stack Engineer</span> with expertise in .NET Core and Angular, 
+              dedicated to building scalable, user-centric applications that solve real-world problems.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              I thrive on transforming complex challenges into elegant solutions, combining strong technical foundations 
+              with innovative thinking to deliver exceptional user experiences. My journey in software development is driven 
+              by continuous learning and a commitment to excellence.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mt-6">
+              <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                <h4 class="font-semibold text-gray-800 mb-2">🚀 Technical Excellence</h4>
+                <p class="text-sm text-gray-600">
+                  Specialized in .NET Core backend development and Angular frontend, with a deep understanding of 
+                  full-stack architecture and modern web technologies.
+                </p>
+              </div>
+              <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-500">
+                <h4 class="font-semibold text-gray-800 mb-2">💡 Problem Solver</h4>
+                <p class="text-sm text-gray-600">
+                  Detail-oriented engineer with a proven track record of optimizing performance, implementing robust 
+                  solutions, and driving technical innovation.
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed mt-4">
+              Currently contributing to cutting-edge projects at <span class="font-semibold">Streams Tech Limited</span>, 
+              where I leverage my expertise to deliver impactful solutions that push the boundaries of web development.
+            </p>
+          </div>
+        </CVSection>
+
+        <CVSection title="Education">
+          <EducationItem
+            institution="University of Dhaka"
+            location="Dhaka, Bangladesh"
+            degree="B.Sc. in Computer Science and Engineering"
+            period="Jan. 2016 ‑ Jan. 2020"
+            cgpa="3.71 / 4.00"
+          />
+        </CVSection>
+
+        <CVSection title="Work Experience">
+          <ExperienceItem
+            company="Streams Tech Limited"
+            location="Dhaka, Bangladesh"
+            position="Full Stack Engineer"
+            period="August 18, 2024 ‑ Present"
+            responsibilities={[
+              "Developing and maintaining full-stack web applications using .NET Core backend and Angular frontend",
+              "Designing and implementing RESTful APIs with .NET Core Web API for seamless frontend-backend communication",
+              "Building responsive and interactive user interfaces with Angular, TypeScript, and modern CSS frameworks",
+              "Writing clean, scalable, and maintainable code following SOLID principles and best practices",
+              "Implementing authentication and authorization using ASP.NET Core Identity and JWT tokens",
+              "Optimizing application performance through code optimization, database query tuning, and caching strategies",
+              "Collaborating with cross-functional teams to define, design, and ship new features",
+              "Participating in code reviews and providing constructive feedback to ensure code quality",
+              "Troubleshooting and debugging issues across the full stack to ensure smooth application operation",
+              "Integrating third-party APIs and services to extend application functionality"
+            ]}
+            projects={[]}
+          />
+          
+          <ExperienceItem
+            company="TigerIT Bangladesh Limited"
+            location="Dhaka, Bangladesh"
+            position="Software Engineer"
+            period="March 15, 2020 ‑ August 15, 2024"
+            responsibilities={[
+              "Designing and developing APIs, ensuring they are scalable, efficient, and adhere to best practices.",
+              "Handling database design, schema creation, query optimization, and integration with APIs using tools like Entity Framework Core or Dapper.",
+              "Implementing core business logic, including authentication, authorization, data validation, and other application-specific rules.",
+              "Optimizing API performance by profiling, tuning response times, managing resource utilization, and ensuring scalability.",
+              "Writing comprehensive unit tests, integration tests, and end-to-end tests to verify the reliability and correctness of APIs.",
+              "Creating detailed API documentation covering endpoints, request/response formats, and usage examples for developers and stakeholders.",
+              "Collaborating with DevOps teams to automate deployment processes, configure CI/CD pipelines, and ensure smooth deployments.",
+              "Implementing security best practices such as HTTPS, data encryption, input validation, and protection against common security vulnerabilities.",
+              "Integrating logging mechanisms and monitoring tools to track API usage, performance metrics, and errors for proactive management.",
+              "Working closely with frontend developers, UX/UI designers, product managers, and other stakeholders to understand requirements and deliver high-quality software solutions.",
+              "Providing ongoing maintenance and support for deployed APIs, addressing bugs, performance issues, and implementing feature requests as needed.",
+              "Following coding standards, best practices, and design patterns specific to .NET Core development to ensure code quality and maintainability.",
+              "Learn new technologies and share knowledge stack with team members"
+            ]}
+            projects={[
+              {
+                name: "(CommChat) A multi-platform, end-to-end encrypted communication software",
+                description: "Runs on Windows, Mac, Linux, and Web. CommChat is a secure chatting application with encrypted calling, messaging, file-sharing functionalities"
+              },
+              {
+                name: "(NID-PUB) Bangladeshi NID correction application platform",
+                description: "Used by millions of Bangladeshi citizens"
+              },
+              {
+                name: "(Project Everest) Vehicle registration and number plate distribution platform",
+                description: "For Department of Transport Management, Government of Nepal"
+              }
+            ]}
+          />
+        </CVSection>
+
+        <CVSection title="Skills">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Programming Languages</h4>
+              <SkillItem skills={["C#", "Java", "Javascript", "C++", "Python"]} />
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Frameworks</h4>
+              <SkillItem skills={[".NET Core", "Spring Boot", "Angular", "React (Next.js)", "NodeJS", "Electron", "Astro", "Gin", "Cloudflare", "Flask", "FastAPI"]} />
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Databases</h4>
+              <SkillItem skills={["MS-SQL", "PostgreSQL", "MySQL", "Redis", "MongoDB", "Firebase"]} />
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Tools</h4>
+              <SkillItem skills={["Git", "Docker", "Nginx", "Postman", "Swagger", "Wildfly", "Weblogic", "Asana", "Azure", "RxJS", "Screen", "Apache", "MQTT"]} />
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Operating System</h4>
+              <SkillItem skills={["Windows", "Linux", "Mac"]} />
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-2">Others</h4>
+              <SkillItem skills={["Algorithms", "Data Structures", "OOP", "Design Patterns", "Signal Protocol", "Software Design", "Cryptography & Security", "Problem Solving"]} />
+            </div>
+          </div>
+        </CVSection>
+
+        <CVSection title="Linguistic Proficiency">
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <span class="font-medium text-gray-800 w-24">English</span>
+              <span class="text-gray-600">Fluent Writing and Speaking Proficiency</span>
+            </div>
+            <div class="flex items-center">
+              <span class="font-medium text-gray-800 w-24">Bangla</span>
+              <span class="text-gray-600">Native Language</span>
+            </div>
+          </div>
+        </CVSection>
+      </div>
+    </div>
+  </div>
+</Layout>
